@@ -17,11 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'file preview and multiple file upload' => 'fájl előnézet és multi fájlfeltöltés',
     'Note:' => 'Jegyzet:',
     'multiple file upload' => 'multi fájlfeltöltés',
-    'file preview and multiple file upload' => 'fájl előnézet és multi fájlfeltöltés',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'A böngészője sajnos nem támogatja {validation}. Kérem frissítse a jelenlegit vagy válasszon alternatív böngészőt.',
-    'Browse' => 'Tallózás',
-    'Remove' => 'Eltávolítás',
-    'Upload' => 'Törlés',
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'A böngészője sajnos nem támogatja {validation}. Kérem frissítse a jelenlegit vagy válasszon alternatív böngészőt.'
 ];

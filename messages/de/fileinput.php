@@ -17,11 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'file preview and multiple file upload' => 'Datei-Vorschau und Hochladen mehrerer Dateien',
     'Note:' => 'Hinweis:',
     'multiple file upload' => 'Hochladen mehrerer Dateien',
-    'file preview and multiple file upload' => 'Datei-Vorschau und Hochladen mehrerer Dateien',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Ihr Browser unterstützt keine {validation}. Versuchen Sie, eine alternative oder neueren Browser, um diese Funktionen zugreifen.',
-    'Browse' => 'blättern',
-    'Remove' => 'entfernen',
-    'Upload' => 'laden',
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Ihr Browser unterstützt keine {validation}. Versuchen Sie, eine alternative oder neueren Browser, um diese Funktionen zugreifen.'
 ];

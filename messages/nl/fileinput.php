@@ -17,11 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'file preview and multiple file upload' => 'bestand preview en uploaden meerdere bestanden',
     'Note:' => 'Opmerking:',
     'multiple file upload' => 'uploaden meerdere bestanden',
-    'file preview and multiple file upload' => 'bestand preview en uploaden meerdere bestanden',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Uw browser ondersteunt geen {validation}. Probeer een andere of nieuwere browser om deze functies te gebruiken.',
-    'Browse' => 'Bladeren',
-    'Remove' => 'Verwijderen',
-    'Upload' => 'Upload',
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Uw browser ondersteunt geen {validation}. Probeer een andere of nieuwere browser om deze functies te gebruiken.'
 ];

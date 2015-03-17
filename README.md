@@ -40,7 +40,7 @@ to the ```require``` section of your `composer.json` file.
 
 ## Latest Release
 
-> NOTE: The latest version of the module is v1.0.0 released on 08-Nov-2014. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-fileinput/blob/master/CHANGE.md) for details.
+> NOTE: The latest version of the module is v1.0.1 released on 17-Mar-2015. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-fileinput/blob/master/CHANGE.md) for details.
 
 ## Demo
 

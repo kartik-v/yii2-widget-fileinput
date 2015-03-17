@@ -17,11 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'file preview and multiple file upload' => 'pregled datoteka i višestruko spremanje datoteka',
     'Note:' => 'Bilješka:',
     'multiple file upload' => 'višestruko spremanje datoteka',
-    'file preview and multiple file upload' => 'pregled datoteka i višestruko spremanje datoteka',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Vaš internet preglednik ne podupire {validation}. Pokušajte sa novijom verzijom internet preglednika.',
-    'Browse' => 'Odaberi',
-    'Remove' => 'Ukloni',
-    'Upload' => 'Snimi na server',
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Vaš internet preglednik ne podupire {validation}. Pokušajte sa novijom verzijom internet preglednika.'
 ];

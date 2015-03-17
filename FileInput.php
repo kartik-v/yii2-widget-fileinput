@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
  * @package yii2-widgets
  * @subpackage yii2-widget-fileinput
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 namespace kartik\file;
@@ -13,6 +13,7 @@ use Yii;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\web\JsExpression;
+use kartik\base\Config;
 
 /**
  * FileInput widget styled for Bootstrap 3.0 with ability to multiple file
@@ -88,31 +89,33 @@ class FileInput extends \kartik\base\InputWidget
     {
         return "<!--[if {$validation}]><br>{$content}<![endif]-->";
     }
-
+    
     /**
-     * Set the default plugin option
-     *
-     * @param string $key the array key in [[pluginOptions]]
-     * @param string $value the value for the key in [[pluginOptions]]
+     * Registers the asset bundle and locale
      */
-    private function setPluginDefault($key, $value)
-    {
-        if (empty($this->pluginOptions[$key])) {
-            $this->pluginOptions[$key] = $value;
+    protected function registerAssetBundle() {
+        $view = $this->getView();
+        if (!empty($this->language) && substr($this->language, 0, 2) != 'en') {
+            $path = Yii::getAlias('@vendor/kartik-v/bootstrap-fileinput/js');
+            $file = "fileinput_locale_{$this->language}.js";
+            if (!Config::fileExists("{$path}/{$file}")) {
+                $file = "fileinput_locale_{$this->_lang}.js";
+            }
+            if (Config::fileExists("{$path}/{$file}")) {
+                FileInputAsset::register($view)->js[] = 'js/' . $file;
+                return;
+            }
         }
+        FileInputAsset::register($view);
     }
-
+    
     /**
      * Registers the needed assets
      */
     public function registerAssets()
     {
         $view = $this->getView();
-        FileInputAsset::register($view);
-
-        $this->setPluginDefault('browseLabel', Yii::t('fileinput', 'Browse') . '&hellip;');
-        $this->setPluginDefault('uploadLabel', Yii::t('fileinput', 'Upload'));
-        $this->setPluginDefault('removeLabel', Yii::t('fileinput', 'Remove'));
+        $this->registerAssetBundle();
         $this->registerPlugin('fileinput');
     }
 }
