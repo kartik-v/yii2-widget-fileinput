@@ -17,11 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'file preview and multiple file upload' => 'ดูตัวอย่าง และอัพโหลดหลายไฟล์',
     'Note:' => 'หมายเหตุ:',
     'multiple file upload' => 'อัพโหลดหลายไฟล์',
-    'file preview and multiple file upload' => 'ดูตัวอย่างไฟล์ และอัพโหลดหลายไฟล์',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'บราวเซอร์ของคุณไม่รองรับ {validation} กรุณาลองบราวเซอร์ตัวอื่นที่ใหม่กว่า เพื่อเข้าใช้งานนี้',
-    'Browse' => 'เลือกไฟล์',
-    'Remove' => 'ลบทิ้ง',
-    'Upload' => 'อัพโหลด',
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'บราวเซอร์ของคุณไม่รองรับ {validation} ลองดูวิธีการอื่น หรือเปลี่ยนบราวเซอร์ เพื่อใช้งานความสามารถนี้'
 ];
