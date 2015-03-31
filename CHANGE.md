@@ -1,7 +1,7 @@
 version 1.0.1
 =============
 
-**Date:** 29-Mar-2015
+**Date:** 30-Mar-2015
 
 - (enh #4): Hungarian translations
 - (enh #20): Croatian translations
