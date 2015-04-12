@@ -17,11 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'file preview and multiple file upload' => '',
     'Note:' => '',
     'multiple file upload' => '',
-    'file preview and multiple file upload' => '',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => '',
-    'Browse' => '',
-    'Remove' => '',
-    'Upload' => '',
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => ''
 ];

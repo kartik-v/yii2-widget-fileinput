@@ -17,11 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'file preview and multiple file upload' => 'fil forhåndsvisning og multi fil upload',
     'Note:' => 'Bemærk:',
     'multiple file upload' => 'multi fil upload',
-    'file preview and multiple file upload' => 'fil forhåndsvisning og multi fil upload',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Din browser supporterer ikke {validation}. Prøv en alternativ eller nyere browser for at bruge disse funktioner.',
-    'Browse' => 'Gennemse',
-    'Remove' => 'Fjern',
-    'Upload' => 'Upload',
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Din browser supporterer ikke {validation}. Prøv en alternativ eller nyere browser for at bruge disse funktioner.'
 ];

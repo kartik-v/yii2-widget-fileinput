@@ -17,8 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'file preview and multiple file upload' => 'Datei-Vorschau und Hochladen mehrerer Dateien',
-    'Note:' => 'Hinweis:',
-    'multiple file upload' => 'Hochladen mehrerer Dateien',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Ihr Browser unterstützt keine {validation}. Versuchen Sie, eine alternative oder neueren Browser, um diese Funktionen zugreifen.'
+    'file preview and multiple file upload' => '文件预览和多文件上传',
+    'Note:' => '注意',
+    'multiple file upload' => '多文件上传',
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => '你的浏览器不支持 {validation}。尝试使用高级的浏览器来获取这些功能'
 ];

@@ -17,11 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'file preview and multiple file upload' => 'предварительный просмотр и множественную загрузку файлов',
     'Note:' => 'Примечание:',
     'multiple file upload' => 'множественную загрузку файлов',
-    'file preview and multiple file upload' => 'предварительный просмотр и множественную загрузку файлов',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Ваш браузер не поддерживает {validation}. Попробуйте более новую версию или другой браузер, чтобы получить доступ к этим функциям.',
-    'Browse' => 'Выбрать',
-    'Remove' => 'Удалить',
-    'Upload' => 'Загрузить',
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Ваш браузер не поддерживает {validation}. Попробуйте более новую версию или другой браузер, чтобы получить доступ к этим функциям.'
 ];

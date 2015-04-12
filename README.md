@@ -1,6 +1,12 @@
 yii2-widget-fileinput
 =====================
 
+[![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/v/stable.svg)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
+[![License](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/license.svg)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
+[![Total Downloads](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/downloads.svg)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
+[![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/d/monthly.png)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
+[![Daily Downloads](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/d/daily.png)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
+
 The FileInput widget is a customized file input widget based on Krajee's [Bootstrap FileInput JQuery Plugin](http://plugins.krajee.com/file-input). The widget enhances the default HTML file input with various features including the following:
 
 * Specially styled for Bootstrap 3.0 with customizable buttons, caption, and preview
@@ -34,7 +40,7 @@ to the ```require``` section of your `composer.json` file.
 
 ## Latest Release
 
-> NOTE: The latest version of the module is v1.0.0 released on 08-Nov-2014. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-fileinput/blob/master/CHANGE.md) for details.
+> NOTE: The latest version of the module is v1.0.1 released on 17-Mar-2015. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-fileinput/blob/master/CHANGE.md) for details.
 
 ## Demo
 
