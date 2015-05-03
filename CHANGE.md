@@ -4,6 +4,7 @@ version 1.0.2
 
 - (enh #23): Add Chinese translations.
 - (enh kartik-v/yii2-krajee-base#34, kartik-v/yii2-krajee-base#35): Enhance i18n translation locales. 
+- (enh #29): Better validation for graceful downgrade for older browsers.
 
 version 1.0.1
 =============

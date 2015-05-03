@@ -63,11 +63,11 @@ class FileInput extends \kartik\base\InputWidget
             Html::addCssClass($this->options, 'file-loading');
         }
         $input = $this->getInput('fileInput');
-        $id = 'jQuery("#' . $this->options['id'] . '")';
+        $script = 'document.getElementById("' . $this->options['id'] . '").className.replace(/\bfile-loading\b/,"");';
         if ($this->showMessage) {
             $validation = ArrayHelper::getValue($this->pluginOptions, 'showPreview', true) ? 'file preview and multiple file upload' : 'multiple file upload';
             $message = '<strong>' . Yii::t('fileinput', 'Note:') . '</strong> ' . Yii::t('fileinput', 'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.', ['validation' => $validation]);
-            $content = Html::tag('div', $message, $this->messageOptions) . "<script>{$id}.removeClass('file-loading');</script>";
+            $content = Html::tag('div', $message, $this->messageOptions) . "<script>{$script};</script>";
             $input .= "\n" . $this->validateIE($content);
         }
         echo $input;
