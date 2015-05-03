@@ -4,7 +4,7 @@
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
  * @package yii2-widgets
  * @subpackage yii2-widget-fileinput
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 namespace kartik\file;
@@ -13,7 +13,6 @@ use Yii;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\web\JsExpression;
-use kartik\base\Config;
 
 /**
  * FileInput widget styled for Bootstrap 3.0 with ability to multiple file
@@ -33,6 +32,8 @@ use kartik\base\Config;
  */
 class FileInput extends \kartik\base\InputWidget
 {
+    use \kartik\base\TranslationTrait;
+    
     /**
      * @var bool whether to show 'plugin unsupported' message for IE browser versions 9 & below
      */
@@ -55,14 +56,8 @@ class FileInput extends \kartik\base\InputWidget
     public function init()
     {
         parent::init();
-        Yii::setAlias('@fileinput', dirname(__FILE__));
-        if (empty($this->i18n)) {
-            $this->i18n = [
-                'class' => 'yii\i18n\PhpMessageSource',
-                'basePath' => '@fileinput/messages'
-            ];
-        }
-        Yii::$app->i18n->translations['fileinput'] = $this->i18n;
+        $this->_msgCat = 'fileinput';
+        $this->initI18N(__DIR__);
         $this->registerAssets();
         if ($this->pluginLoading) {
             Html::addCssClass($this->options, 'file-loading');
@@ -93,20 +88,9 @@ class FileInput extends \kartik\base\InputWidget
     /**
      * Registers the asset bundle and locale
      */
-    protected function registerAssetBundle() {
+    public function registerAssetBundle() {
         $view = $this->getView();
-        if (!empty($this->language) && substr($this->language, 0, 2) != 'en') {
-            $path = Yii::getAlias('@vendor/kartik-v/bootstrap-fileinput/js');
-            $file = "fileinput_locale_{$this->language}.js";
-            if (!Config::fileExists("{$path}/{$file}")) {
-                $file = "fileinput_locale_{$this->_lang}.js";
-            }
-            if (Config::fileExists("{$path}/{$file}")) {
-                FileInputAsset::register($view)->js[] = 'js/' . $file;
-                return;
-            }
-        }
-        FileInputAsset::register($view);
+        FileInputAsset::register($view)->addLanguage($this->language, 'fileinput_locale_');
     }
     
     /**
@@ -114,7 +98,6 @@ class FileInput extends \kartik\base\InputWidget
      */
     public function registerAssets()
     {
-        $view = $this->getView();
         $this->registerAssetBundle();
         $this->registerPlugin('fileinput');
     }

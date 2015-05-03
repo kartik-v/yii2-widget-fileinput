@@ -1,6 +1,12 @@
+version 1.0.2
+=============
+**Date:** 03-May-2015
+
+- (enh #23): Add Chinese translations.
+- (enh kartik-v/yii2-krajee-base#34, kartik-v/yii2-krajee-base#35): Enhance i18n translation locales. 
+
 version 1.0.1
 =============
-
 **Date:** 30-Mar-2015
 
 - (enh #4): Hungarian translations
@@ -12,7 +18,6 @@ version 1.0.1
 
 version 1.0.0
 =============
-
 **Date:** 08-Nov-2014
 
 - Initial release 
