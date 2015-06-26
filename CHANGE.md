@@ -1,3 +1,9 @@
+version 1.0.3
+=============
+**Date:** 26-Jun-2015
+
+- (bug #33): Initialize `language` correctly.
+
 version 1.0.2
 =============
 **Date:** 03-May-2015

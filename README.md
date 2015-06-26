@@ -27,20 +27,20 @@ The preferred way to install this extension is through [composer](http://getcomp
 To install, either run
 
 ```
-$ php composer.phar require kartik-v/yii2-widget-fileinput "*"
+$ php composer.phar require kartik-v/yii2-widget-fileinput "@dev"
 ```
 
 or add
 
 ```
-"kartik-v/yii2-widget-fileinput": "*"
+"kartik-v/yii2-widget-fileinput": "@dev"
 ```
 
 to the ```require``` section of your `composer.json` file.
 
 ## Latest Release
 
-> NOTE: The latest version of the module is v1.0.2. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-fileinput/blob/master/CHANGE.md) for details.
+> NOTE: The latest version of the module is v1.0.3. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-fileinput/blob/master/CHANGE.md) for details.
 
 ## Demo
 
