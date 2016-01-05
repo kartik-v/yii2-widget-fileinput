@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Message translations for \kartik\widgets\FileInput.
+ * Message translations for \kartik\file\FileInput.
  *
  * It contains the localizable messages extracted from source code.
  * You may modify this file by translating the extracted messages.
