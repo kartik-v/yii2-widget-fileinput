@@ -17,7 +17,7 @@ use kartik\base\AssetBundle;
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class FileInputAsset extends AssetBundle
+class CanvasBlobAsset extends AssetBundle
 {
     /**
      * @inheritdoc
@@ -25,8 +25,7 @@ class FileInputAsset extends AssetBundle
     public function init()
     {
         $this->setSourcePath('@vendor/kartik-v/bootstrap-fileinput');
-        $this->setupAssets('css', ['css/fileinput']);
-        $this->setupAssets('js', ['js/fileinput']);
+        $this->setupAssets('js', ['js/plugins/canvas-to-blob']);
         parent::init();
     }
 }
