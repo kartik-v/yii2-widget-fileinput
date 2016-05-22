@@ -138,7 +138,7 @@ class FileInput extends InputWidget
             DomPurifyAsset::register($view);
             $this->pluginOptions['purifyHtml'] = true;
         }
-        FileInputAsset::register($view)->addLanguage($this->language, '');
+        FileInputAsset::register($view)->addLanguage($this->language, '', 'js/locales');
     }
 
     /**
