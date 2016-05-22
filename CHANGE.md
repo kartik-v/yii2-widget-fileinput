@@ -1,6 +1,14 @@
 Change Log: `yii2-widget-fileinput`
 ===================================
 
+## Version 1.0.5
+
+**Date:** 22-May-2016
+
+- (enh #70): Add Estonian Translations.
+- (enh #71): Enhancements for plugin v4.3.2.
+- Add branch alias for dev-master latest release.
+
 ## Version 1.0.4
 
 **Date:** 10-Jan-2016

@@ -3,7 +3,7 @@
 /**
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2016
  * @package yii2-widgets
- * @subpackage yii2-widget-fileinput
+ * @subpackage yii2-widget-rating
  * @version 1.0.5
  */
 
@@ -12,12 +12,12 @@ namespace kartik\file;
 use kartik\base\AssetBundle;
 
 /**
- * Asset bundle for FileInput Widget
+ * DomPurify asset bundle for FileInput Widget
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class FileInputAsset extends AssetBundle
+class DomPurifyAsset extends AssetBundle
 {
     /**
      * @inheritdoc
@@ -25,8 +25,7 @@ class FileInputAsset extends AssetBundle
     public function init()
     {
         $this->setSourcePath('@vendor/kartik-v/bootstrap-fileinput');
-        $this->setupAssets('css', ['css/fileinput']);
-        $this->setupAssets('js', ['js/fileinput']);
+        $this->setupAssets('js', ['js/plugins/purify']);
         parent::init();
     }
 }

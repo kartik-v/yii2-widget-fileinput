@@ -4,14 +4,14 @@
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2016
  * @package yii2-widgets
  * @subpackage yii2-widget-fileinput
- * @version 1.0.4
+ * @version 1.0.5
  */
 
 namespace kartik\file;
 
 use Yii;
-use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
 use kartik\base\InputWidget;
 use kartik\base\TranslationTrait;
 
@@ -38,6 +38,16 @@ class FileInput extends InputWidget
     public $resizeImages = false;
 
     /**
+     * @var bool whether to load sortable plugin to rearrange initial preview images on client side
+     */
+    public $sortThumbs = true;
+
+    /**
+     * @var bool whether to load dom purify plugin to purify HTML content in purfiy
+     */
+    public $purifyHtml = true;
+
+    /**
      * @var bool whether to show 'plugin unsupported' message for IE browser versions 9 & below
      */
     public $showMessage = true;
@@ -57,6 +67,11 @@ class FileInput extends InputWidget
      * @inheritdoc
      */
     public $pluginName = 'fileinput';
+
+    /**
+     * @var array the list of inbuilt themes
+     */
+    private static $_themes = ['fa', 'gly'];
 
     /**
      * @var array initialize the FileInput widget
@@ -112,7 +127,18 @@ class FileInput extends InputWidget
             CanvasBlobAsset::register($view);
             $this->pluginOptions['resizeImage'] = true;
         }
-        FileInputAsset::register($view)->addLanguage($this->language, 'fileinput_locale_');
+        $theme = ArrayHelper::getValue($this->pluginOptions, 'theme');
+        if (!empty($theme) && in_array($theme, self::$_themes)) {
+            FileInputThemeAsset::register($view)->addTheme($theme);
+        }
+        if ($this->sortThumbs) {
+            SortableAsset::register($view);
+        }
+        if ($this->purifyHtml) {
+            DomPurifyAsset::register($view);
+            $this->pluginOptions['purifyHtml'] = true;
+        }
+        FileInputAsset::register($view)->addLanguage($this->language, '');
     }
 
     /**
