@@ -27,11 +27,7 @@ class FileInputThemeAsset extends AssetBundle
     /**
      * @inheritdoc
      */
-    public function init()
-    {
-        $this->depends = array_merge($this->depends, ['kartik\rating\FileInputAsset']);
-        parent::init();
-    }
+    public $depends = ['kartik\file\FileInputAsset'];
 
     /**
      * Add file input theme file
