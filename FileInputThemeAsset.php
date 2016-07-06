@@ -36,11 +36,13 @@ class FileInputThemeAsset extends AssetBundle
      */
     public function addTheme($theme)
     {
-        if ($this->checkExists("themes/{$theme}/{$theme}.js")) {
-            $this->js[] = "themes/{$theme}/{$theme}.js";
+        $file = YII_DEBUG ? "theme.js" : "theme.min.js";
+        if ($this->checkExists("themes/{$theme}/{$file}")) {
+            $this->js[] = "themes/{$theme}/{$file}";
         } 
-        if ($this->checkExists("themes/{$theme}/{$theme}.css")) {
-            $this->css[] = "themes/{$theme}/{$theme}.css";
+        $file = YII_DEBUG ? "theme.css" : "theme.min.css";
+        if ($this->checkExists("themes/{$theme}/{$file}")) {
+            $this->css[] = "themes/{$theme}/{$file}";
         } 
         return $this;
     }
