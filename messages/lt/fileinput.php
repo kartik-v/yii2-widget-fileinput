@@ -17,8 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'file preview and multiple file upload' => 'fail? per�i?ra ir ?k?limas',
+    'file preview and multiple file upload' => 'failų peržiūra ir įkėlimas',
     'Note:' => 'Pastaba:',
-    'multiple file upload' => 'fail? ?k?limas',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'J?s? nar�ykl? nepalaiko {validation}. Bandykite naudotis kita nar�ykle arba naujesne esamos nar�ykl?s versija.'
+    'multiple file upload' => 'failų įkėlimas',
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Jūsų naršyklė nepalaiko {validation}. Bandykite naudotis kita naršykle arba naujesne esamos naršyklės versija.'
 ];
