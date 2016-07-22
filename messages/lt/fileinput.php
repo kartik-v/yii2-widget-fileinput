@@ -20,5 +20,5 @@ return [
     'file preview and multiple file upload' => 'failų peržiūra ir įkėlimas',
     'Note:' => 'Pastaba:',
     'multiple file upload' => 'failų įkėlimas',
-    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Jūsų naršyklė nepalaiko {validation}. Bandykite naudotis kita naršykle arba naujesne esamos naršyklės versija.'
+    'Your browser does not support {validation}. Try an alternative or more recent browser to access these features.' => 'Jūsų naršyklė nepalaiko {validation}. Naudokite kitą naršyklę arba naujesnę esamos naršyklės versiją.'
 ];
