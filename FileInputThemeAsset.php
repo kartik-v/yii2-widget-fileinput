@@ -10,6 +10,7 @@
 namespace kartik\file;
 
 use kartik\base\AssetBundle;
+use Yii;
 
 /**
  * Theme Asset bundle for the FileInput Widget
