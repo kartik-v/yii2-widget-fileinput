@@ -71,7 +71,7 @@ class FileInput extends InputWidget
     /**
      * @var array the list of inbuilt themes
      */
-    private static $_themes = ['fa', 'gly'];
+    private static $_themes = ['fa', 'gly', 'explorer'];
 
     /**
      * @var array initialize the FileInput widget
