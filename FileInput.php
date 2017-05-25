@@ -86,6 +86,9 @@ class FileInput extends InputWidget
         if ($this->pluginLoading) {
             Html::addCssClass($this->options, 'file-loading');
         }
+	    if (!isset($this->field->form->options['enctype'])) {
+		    $this->field->form->options['enctype'] = 'multipart/form-data';
+	    }
         $input = $this->getInput('fileInput');
         $script = 'document.getElementById("' . $this->options['id'] . '").className.replace(/\bfile-loading\b/,"");';
         if ($this->showMessage) {
