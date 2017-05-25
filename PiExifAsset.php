@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2016
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @package yii2-widgets
  * @subpackage yii2-widget-fileinput
- * @version 1.0.5
+ * @version 1.0.6
  */
 
 namespace kartik\file;
@@ -12,12 +12,12 @@ namespace kartik\file;
 use kartik\base\AssetBundle;
 
 /**
- * CanvasToBlob Asset bundle for FileInput Widget
+ * PiExif Asset bundle for FileInput Widget
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
  */
-class CanvasBlobAsset extends AssetBundle
+class PiExifAsset extends AssetBundle
 {
     /**
      * @inheritdoc
@@ -25,7 +25,7 @@ class CanvasBlobAsset extends AssetBundle
     public function init()
     {
         $this->setSourcePath('@vendor/kartik-v/bootstrap-fileinput');
-        $this->setupAssets('js', ['js/plugins/canvas-to-blob']);
+        $this->setupAssets('js', ['js/plugins/piexif']);
         parent::init();
     }
 }
