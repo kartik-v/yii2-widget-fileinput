@@ -4,7 +4,7 @@
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @package yii2-widgets
  * @subpackage yii2-widget-fileinput
- * @version 1.0.6
+ * @version 1.0.7
  */
 
 namespace kartik\file;
@@ -16,7 +16,7 @@ use kartik\base\InputWidget;
 use kartik\base\TranslationTrait;
 
 /**
- * Wrapper for the Bootstrap FileInput JQuery Plugin by Krajee. The FileInput widget is styled for Bootstrap 3.0 with
+ * Wrapper for the Bootstrap FileInput JQuery Plugin by Krajee. The FileInput widget is styled for Bootstrap 3.x with
  * ability to multiple file selection and preview, format button styles and inputs. Runs on all modern browsers
  * supporting HTML5 File Inputs and File Processing API. For browser versions IE9 and below, this widget will
  * gracefully degrade to normal HTML file input.
@@ -33,22 +33,22 @@ class FileInput extends InputWidget
     use TranslationTrait;
 
     /**
-     * @var bool whether to resize images on client side
+     * @var boolean whether to resize images on client side
      */
     public $resizeImages = false;
 
     /**
-     * @var bool whether to load sortable plugin to rearrange initial preview images on client side
+     * @var boolean whether to load sortable plugin to rearrange initial preview images on client side
      */
     public $sortThumbs = true;
 
     /**
-     * @var bool whether to load dom purify plugin to purify HTML content in purfiy
+     * @var boolean whether to load dom purify plugin to purify HTML content in purfiy
      */
     public $purifyHtml = true;
 
     /**
-     * @var bool whether to show 'plugin unsupported' message for IE browser versions 9 & below
+     * @var boolean whether to show 'plugin unsupported' message for IE browser versions 9 & below
      */
     public $showMessage = true;
 
@@ -71,7 +71,7 @@ class FileInput extends InputWidget
     /**
      * @var array the list of inbuilt themes
      */
-    private static $_themes = ['fa', 'gly', 'explorer'];
+    private static $_themes = ['fa', 'gly', 'explorer', 'explorer-fa'];
 
     /**
      * @var array initialize the FileInput widget

@@ -1,6 +1,12 @@
 Change Log: `yii2-widget-fileinput`
 ===================================
 
+## Version 1.0.7
+
+**Date:** 25-Jun-2017
+
+- (enh #120): Add Explorer FA Theme support.
+
 ## Version 1.0.6
 
 **Date:** 26-May-2017
