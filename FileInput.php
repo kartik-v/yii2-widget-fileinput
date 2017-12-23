@@ -81,7 +81,7 @@ class FileInput extends InputWidget
         parent::init();
         $this->_msgCat = 'fileinput';
         $this->initI18N(__DIR__);
-        $this->initLanguage();
+        $this->initLanguage('language', true);
         $this->registerAssets();
         if ($this->pluginLoading) {
             Html::addCssClass($this->options, 'file-loading');
