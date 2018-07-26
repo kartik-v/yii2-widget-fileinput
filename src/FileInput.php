@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2018
  * @package yii2-widgets
  * @subpackage yii2-widget-fileinput
  * @version 1.0.7
@@ -16,10 +16,10 @@ use kartik\base\InputWidget;
 use kartik\base\TranslationTrait;
 
 /**
- * Wrapper for the Bootstrap FileInput JQuery Plugin by Krajee. The FileInput widget is styled for Bootstrap 3.x with
- * ability to multiple file selection and preview, format button styles and inputs. Runs on all modern browsers
- * supporting HTML5 File Inputs and File Processing API. For browser versions IE9 and below, this widget will
- * gracefully degrade to normal HTML file input.
+ * Wrapper for the Bootstrap FileInput JQuery Plugin by Krajee. The FileInput widget is styled for Bootstrap 3.x  
+ * & 4.x with ability to multiple file selection and preview, format button styles and inputs. Runs on all modern 
+ * browsers supporting HTML5 File Inputs and File Processing API. For browser versions IE9 and below, this widget
+ * will gracefully degrade to a native HTML file input.
  *
  * @see http://plugins.krajee.com/bootstrap-fileinput
  * @see https://github.com/kartik-v/bootstrap-fileinput
@@ -36,6 +36,11 @@ class FileInput extends InputWidget
      * @var boolean whether to resize images on client side
      */
     public $resizeImages = false;
+
+    /**
+     * @var boolean whether to auto orient images on client side
+     */
+    public $autoOrientImages = true;
 
     /**
      * @var boolean whether to load sortable plugin to rearrange initial preview images on client side
@@ -126,9 +131,10 @@ class FileInput extends InputWidget
     public function registerAssetBundle()
     {
         $view = $this->getView();
-        if ($this->resizeImages) {
+        $this->pluginOptions['resizeImage'] = $this->resizeImages;
+        $this->pluginOptions['autoOrientImage'] = $this->autoOrientImages;
+        if ($this->resizeImages || $this->autoOrientImages) {
             PiExifAsset::register($view);
-            $this->pluginOptions['resizeImage'] = true;
         }
         $theme = ArrayHelper::getValue($this->pluginOptions, 'theme');
         if (!empty($theme) && in_array($theme, self::$_themes)) {

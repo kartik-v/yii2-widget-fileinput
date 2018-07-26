@@ -3,8 +3,12 @@ Change Log: `yii2-widget-fileinput`
 
 ## Version 1.0.7
 
-**Date:** 25-Jun-2017
+**Date:** 26-Jul-2018
 
+- Reorganize relevant code in "src" directory.
+- Optimize asset bundles.
+- (enh #134): Add Slovak Translations.
+- (enh #126): Add Finnish Translations.
 - (enh #120): Add Explorer FA Theme support.
 
 ## Version 1.0.6
