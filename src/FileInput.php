@@ -16,8 +16,8 @@ use kartik\base\InputWidget;
 use kartik\base\TranslationTrait;
 
 /**
- * Wrapper for the Bootstrap FileInput JQuery Plugin by Krajee. The FileInput widget is styled for Bootstrap 3.x  
- * & 4.x with ability to multiple file selection and preview, format button styles and inputs. Runs on all modern 
+ * Wrapper for the Bootstrap FileInput JQuery Plugin by Krajee. The FileInput widget is styled for Bootstrap 3.x
+ * & 4.x with ability to multiple file selection and preview, format button styles and inputs. Runs on all modern
  * browsers supporting HTML5 File Inputs and File Processing API. For browser versions IE9 and below, this widget
  * will gracefully degrade to a native HTML file input.
  *
@@ -64,11 +64,6 @@ class FileInput extends InputWidget
     public $messageOptions = ['class' => 'alert alert-warning'];
 
     /**
-     * @var array the internalization configuration for this widget
-     */
-    public $i18n = [];
-
-    /**
      * @inheritdoc
      */
     public $pluginName = 'fileinput';
@@ -76,14 +71,25 @@ class FileInput extends InputWidget
     /**
      * @var array the list of inbuilt themes
      */
-    private static $_themes = ['fa', 'gly', 'explorer', 'explorer-fa'];
+    protected static $_themes = ['fa', 'fas', 'gly', 'explorer', 'explorer-fa', 'explorer-fas'];
 
     /**
-     * @var array initialize the FileInput widget
+     * @inheritdoc
+     * @throws \ReflectionException
+     * @throws \yii\base\InvalidConfigException
      */
-    public function init()
+    public function run()
     {
-        parent::init();
+        return $this->initWidget();
+    }
+
+    /**
+     * Initializes widget
+     * @throws \ReflectionException
+     * @throws \yii\base\InvalidConfigException
+     */
+    protected function initWidget()
+    {
         $this->_msgCat = 'fileinput';
         $this->initI18N(__DIR__);
         $this->initLanguage();
@@ -109,7 +115,7 @@ class FileInput extends InputWidget
             $content = Html::tag('div', $message, $this->messageOptions) . "<script>{$script};</script>";
             $input .= "\n" . $this->validateIE($content);
         }
-        echo $input;
+        return $input;
     }
 
     /**
@@ -127,6 +133,7 @@ class FileInput extends InputWidget
 
     /**
      * Registers the asset bundle and locale
+     * @throws \yii\base\InvalidConfigException
      */
     public function registerAssetBundle()
     {
@@ -135,6 +142,9 @@ class FileInput extends InputWidget
         $this->pluginOptions['autoOrientImage'] = $this->autoOrientImages;
         if ($this->resizeImages || $this->autoOrientImages) {
             PiExifAsset::register($view);
+        }
+        if (empty($this->pluginOptions['theme']) && $this->isBs4()) {
+            $this->pluginOptions['theme'] = 'fas';
         }
         $theme = ArrayHelper::getValue($this->pluginOptions, 'theme');
         if (!empty($theme) && in_array($theme, self::$_themes)) {
@@ -152,6 +162,7 @@ class FileInput extends InputWidget
 
     /**
      * Registers the needed assets
+     * @throws \yii\base\InvalidConfigException
      */
     public function registerAssets()
     {

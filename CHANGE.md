@@ -3,8 +3,10 @@ Change Log: `yii2-widget-fileinput`
 
 ## Version 1.0.7
 
-**Date:** 26-Jul-2018
+**Date:** 07-Sep-2018
 
+- Updates to support Bootstrap 4.x.
+- (kartik-v/yii2-krajee-base#94): Refactor code and consolidate / optimize properties within traits.
 - Reorganize relevant code in "src" directory.
 - Optimize asset bundles.
 - (enh #134): Add Slovak Translations.

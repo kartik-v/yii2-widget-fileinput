@@ -9,6 +9,7 @@
 
 namespace kartik\file;
 
+use yii\web\AssetBundle;
 use Yii;
 
 /**
@@ -28,20 +29,21 @@ class FileInputThemeAsset extends BaseAsset
      * Add file input theme file
      *
      * @param string $theme the theme file name
+     * @return AssetBundle
      */
     public function addTheme($theme)
     {
         $file = YII_DEBUG ? "theme.js" : "theme.min.js";
         if ($this->checkExists("themes/{$theme}/{$file}")) {
             $this->js[] = "themes/{$theme}/{$file}";
-        } 
+        }
         $file = YII_DEBUG ? "theme.css" : "theme.min.css";
         if ($this->checkExists("themes/{$theme}/{$file}")) {
             $this->css[] = "themes/{$theme}/{$file}";
-        } 
+        }
         return $this;
     }
-    
+
     /**
      * Check if file exists in path provided
      *
@@ -49,7 +51,7 @@ class FileInputThemeAsset extends BaseAsset
      *
      * @return boolean
      */
-    protected  function checkExists($path)
+    protected function checkExists($path)
     {
         return file_exists(Yii::getAlias($this->sourcePath . '/' . $path));
     }
