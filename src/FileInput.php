@@ -30,8 +30,6 @@ use kartik\base\TranslationTrait;
  */
 class FileInput extends InputWidget
 {
-    use TranslationTrait;
-
     /**
      * @var boolean whether to resize images on client side
      */
