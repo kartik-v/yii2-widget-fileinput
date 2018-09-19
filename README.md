@@ -1,7 +1,8 @@
 yii2-widget-fileinput
 =====================
 
-[![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/v/stable)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
+[![Stable Version](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/v/stable)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
+[![Unstable Version](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/v/unstable)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
 [![License](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/license)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
 [![Total Downloads](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/downloads)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
 [![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-widget-fileinput/d/monthly)](https://packagist.org/packages/kartik-v/yii2-widget-fileinput)
@@ -65,4 +66,4 @@ echo FileInput::widget([
 
 ## License
 
-**yii2-widget-fileinput** is released under the BSD 3-Clause License. See the bundled `LICENSE.md` for details.
+**yii2-widget-fileinput** is released under the BSD-3-Clause License. See the bundled `LICENSE.md` for details.

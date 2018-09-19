@@ -1,6 +1,12 @@
 Change Log: `yii2-widget-fileinput`
 ===================================
 
+## Version 1.0.8
+
+**Date:** 19-Sep-2018
+
+- Bump version.
+
 ## Version 1.0.7
 
 **Date:** 07-Sep-2018
