@@ -98,6 +98,16 @@ class FileInput extends InputWidget
         if (isset($this->field) && isset($this->field->form) && !isset($this->field->form->options['enctype'])) {
             $this->field->form->options['enctype'] = 'multipart/form-data';
         }
+
+        /**
+         * Bugfix issue 130: together with DetailView, we cant juste append "[]"
+         * to the Model-Attribute. This would cause a "yii\base\UnknownPropertyException"-Exception im some usecases.
+         * Anyway, ensure the html array notation at this point.
+         */
+        if (ArrayHelper::getValue($this->options,'multiple')) {
+            $this->attribute .= '[]';
+        }
+
         $input = $this->getInput('fileInput');
         $script = 'document.getElementById("' . $this->options['id'] . '").className.replace(/\bfile-loading\b/,"");';
         if ($this->showMessage) {
