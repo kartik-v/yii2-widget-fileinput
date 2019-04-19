@@ -1,6 +1,13 @@
 Change Log: `yii2-widget-fileinput`
 ===================================
 
+## Version 1.0.9
+
+**Date:** 19-Apr-2019
+
+- (enh #147): Auto-set multiple file upload naming convention.
+- Bump composer dependencies.
+
 ## Version 1.0.8
 
 **Date:** 19-Sep-2018

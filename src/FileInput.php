@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2018
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2019
  * @package yii2-widgets
  * @subpackage yii2-widget-fileinput
- * @version 1.0.8
+ * @version 1.0.9
  */
 
 namespace kartik\file;
@@ -95,8 +95,22 @@ class FileInput extends InputWidget
         if ($this->pluginLoading) {
             Html::addCssClass($this->options, 'file-loading');
         }
+        /**
+         * Auto-set form enctype for file uploads
+         */
         if (isset($this->field) && isset($this->field->form) && !isset($this->field->form->options['enctype'])) {
             $this->field->form->options['enctype'] = 'multipart/form-data';
+        }
+        /**
+         * Auto-set multiple file upload naming convention
+         */
+        if (ArrayHelper::getValue($this->options, 'multiple')) {
+            $hasModel = $this->hasModel();
+            if ($hasModel && strpos($this->attribute, '[]') === false) {
+                $this->attribute .= '[]';
+            } elseif (!$hasModel && strpos($this->name, '[]') === false) {
+                $this->name .= '[]';
+            }
         }
         $input = $this->getInput('fileInput');
         $script = 'document.getElementById("' . $this->options['id'] . '").className.replace(/\bfile-loading\b/,"");';
