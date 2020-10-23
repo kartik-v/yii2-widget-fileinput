@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2019
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2020
  * @package yii2-widgets
  * @subpackage yii2-widget-fileinput
- * @version 1.0.9
+ * @version 1.1.0
  */
 
 namespace kartik\file;
@@ -47,6 +47,7 @@ class FileInput extends InputWidget
 
     /**
      * @var boolean whether to load dom purify plugin to purify HTML content in purfiy
+     * @deprecated since v1.1.0 (not required since bootstrap-fileinput v5.1.3)
      */
     public $purifyHtml = true;
 
@@ -164,10 +165,6 @@ class FileInput extends InputWidget
         }
         if ($this->sortThumbs) {
             SortableAsset::register($view);
-        }
-        if ($this->purifyHtml) {
-            DomPurifyAsset::register($view);
-            $this->pluginOptions['purifyHtml'] = true;
         }
         FileInputAsset::register($view)->addLanguage($this->language, '', 'js/locales');
     }
