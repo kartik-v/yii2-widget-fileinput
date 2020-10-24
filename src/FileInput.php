@@ -105,7 +105,7 @@ class FileInput extends InputWidget
         /**
          * Auto-set multiple file upload naming convention
          */
-        if (ArrayHelper::getValue($this->options, 'multiple')) {
+        if (ArrayHelper::getValue($this->options, 'multiple') && !ArrayHelper::getValue($this->pluginOptions, 'uploadUrl')) { 
             $hasModel = $this->hasModel();
             if ($hasModel && strpos($this->attribute, '[]') === false) {
                 $this->attribute .= '[]';
