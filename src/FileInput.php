@@ -1,23 +1,26 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2020
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
  * @package yii2-widgets
  * @subpackage yii2-widget-fileinput
- * @version 1.1.0
+ * @version 1.1.1
  */
 
 namespace kartik\file;
 
+use Exception;
+use kartik\base\BootstrapIconsAsset;
+use ReflectionException;
 use Yii;
+use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use kartik\base\InputWidget;
-use kartik\base\TranslationTrait;
 
 /**
- * Wrapper for the Bootstrap FileInput JQuery Plugin by Krajee. The FileInput widget is styled for Bootstrap 3.x
- * & 4.x with ability to multiple file selection and preview, format button styles and inputs. Runs on all modern
+ * Wrapper for the Bootstrap FileInput JQuery Plugin by Krajee. The FileInput widget is styled for Bootstrap 3.x,
+ * 4.x & 5.x with ability to multiple file selection and preview, format button styles and inputs. Runs on all modern
  * browsers supporting HTML5 File Inputs and File Processing API. For browser versions IE9 and below, this widget
  * will gracefully degrade to a native HTML file input.
  *
@@ -47,7 +50,7 @@ class FileInput extends InputWidget
 
     /**
      * @var boolean whether to load dom purify plugin to purify HTML content in purfiy
-     * @deprecated since v1.1.0 (not required since bootstrap-fileinput v5.1.3)
+     * @deprecated since v1.1.1 (not required since bootstrap-fileinput v5.1.3)
      */
     public $purifyHtml = true;
 
@@ -74,8 +77,8 @@ class FileInput extends InputWidget
 
     /**
      * @inheritdoc
-     * @throws \ReflectionException
-     * @throws \yii\base\InvalidConfigException
+     * @throws ReflectionException
+     * @throws InvalidConfigException
      */
     public function run()
     {
@@ -84,14 +87,14 @@ class FileInput extends InputWidget
 
     /**
      * Initializes widget
-     * @throws \ReflectionException
-     * @throws \yii\base\InvalidConfigException
+     * @throws ReflectionException
+     * @throws InvalidConfigException
      */
     protected function initWidget()
     {
         $this->_msgCat = 'fileinput';
         $this->initI18N(__DIR__);
-        $this->initLanguage();
+        $this->initLanguage('language', true);
         $this->registerAssets();
         if ($this->pluginLoading) {
             Html::addCssClass($this->options, 'file-loading');
@@ -146,7 +149,7 @@ class FileInput extends InputWidget
 
     /**
      * Registers the asset bundle and locale
-     * @throws \yii\base\InvalidConfigException
+     * @throws InvalidConfigException|Exception
      */
     public function registerAssetBundle()
     {
@@ -156,8 +159,12 @@ class FileInput extends InputWidget
         if ($this->resizeImages || $this->autoOrientImages) {
             PiExifAsset::register($view);
         }
-        if (empty($this->pluginOptions['theme']) && $this->isBs4()) {
-            $this->pluginOptions['theme'] = 'fas';
+        if (empty($this->pluginOptions['theme'])) {
+            if ($this->isBs(3)) {
+                $this->pluginOptions['theme'] = 'gly';
+            } else {
+                BootstrapIconsAsset::register($view);
+            }
         }
         $theme = ArrayHelper::getValue($this->pluginOptions, 'theme');
         if (!empty($theme) && in_array($theme, self::$_themes)) {
@@ -171,7 +178,7 @@ class FileInput extends InputWidget
 
     /**
      * Registers the needed assets
-     * @throws \yii\base\InvalidConfigException
+     * @throws InvalidConfigException
      */
     public function registerAssets()
     {

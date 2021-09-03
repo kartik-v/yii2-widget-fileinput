@@ -1,6 +1,6 @@
 {
     "name": "kartik-v/yii2-widget-fileinput",
-    "description": "An enhanced FileInput widget for Bootstrap 3.x & 4.x with file preview, multiple selection, and more features (sub repo split from yii2-widgets)",
+    "description": "An enhanced FileInput widget for Bootstrap 3.x, 4.x & 5.x with file preview, multiple selection, and more features (sub repo split from yii2-widgets)",
     "keywords": ["yii2", "extension", "widget", "input", "file", "form", "upload", "jquery", "plugin"],
     "homepage": "https://github.com/kartik-v/yii2-widget-fileinput",
     "type": "yii2-extension",
@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "kartik-v/yii2-krajee-base": ">=2.0.0",
+        "kartik-v/yii2-krajee-base": ">=3.0.1",
         "kartik-v/bootstrap-fileinput": ">=5.0.0"
     },
     "autoload": {

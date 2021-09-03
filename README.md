@@ -20,7 +20,7 @@
 
 The FileInput widget is a customized file input widget based on Krajee's [Bootstrap FileInput JQuery Plugin](http://plugins.krajee.com/file-input). The widget enhances the default HTML file input with various features including the following:
 
-* Specially styled for Bootstrap 3.0 with customizable buttons, caption, and preview
+* Specially styled for Bootstrap 3.x, 4.x and 5.x with customizable buttons, caption, and preview
 * Ability to select and preview multiple files
 * Includes file browse and optional remove and upload buttons.
 * Ability to format your file picker button styles

@@ -1,6 +1,13 @@
 Change Log: `yii2-widget-fileinput`
 ===================================
 
+## Version 1.1.1
+
+**Date:** 03-Sep-2021
+
+- (enh #180): Enhancements to support Bootstrap v5.x.
+- (bug #179): Support translations for language codes with hyphen.
+
 ## Version 1.1.0
 
 **Date:** 24-Oct-2020
