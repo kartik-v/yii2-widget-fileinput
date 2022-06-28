@@ -13,8 +13,8 @@
         }
     ],
     "require": {
-        "kartik-v/yii2-krajee-base": ">=3.0.1",
-        "kartik-v/bootstrap-fileinput": ">=5.0.0"
+        "kartik-v/yii2-krajee-base": ">=3.0.5",
+        "kartik-v/bootstrap-fileinput": ">=5.5.0"
     },
     "autoload": {
         "psr-4": {
